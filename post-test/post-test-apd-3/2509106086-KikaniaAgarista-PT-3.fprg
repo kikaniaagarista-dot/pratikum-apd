@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="POSTTEST3 APD KIKAN"/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-27 09:27:32 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtMEMzUVJTSTI7MjAyNS0wOS0yNzsxMjoyMzo0NiBQTTsyNjQ5"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtMEMzUVJTSTI7MjAyNS0wOS0yNzswOToyNzozMiBQTTsyOzI3NjM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nm, asli, pp, BR, SV, GL, PL" type="String" array="False" size=""/>
+            <declare name="NIM, nasli, TBB" type="Integer" array="False" size=""/>
+            <declare name="TBS, TBG, TBP, BA, BL" type="Real" array="False" size=""/>
+            <output expression="&quot;Masukan nama&quot;" newline="True"/>
+            <input variable="nm"/>
+            <output expression="&quot;Masukan NIM&quot;" newline="True"/>
+            <input variable="NIM"/>
+            <assign variable="asli" expression="&quot;KIkan&quot;"/>
+            <assign variable="nasli" expression="086"/>
+            <if expression="(nm=asli) AND (NIM=nasli)">
+                <then>
+                    <output expression="&quot;login&quot;" newline="True"/>
+                    <output expression="&quot;Paket Bronze: Biaya administrasi 1%, akses dasar ke lagu-lagu populer.&quot;" newline="True"/>
+                    <output expression="&quot;Paket Silver: Biaya administrasi 3%, akses lagu premium dan playlist kustom.&quot;" newline="True"/>
+                    <output expression="&quot;Paket Gold: Biaya administrasi 5%, akses lagu premium, playlist kustom, dan mode offline.&quot;" newline="True"/>
+                    <output expression="&quot;Paket Platinum: Biaya administrasi 7%, akses semua fitur, playlist kustom, mode offline, dan konten eksklusif artis.&quot;" newline="True"/>
+                    <output expression="&quot;Pilih Paket BRONZE SILVER GOLD PLATINUM&quot;" newline="True"/>
+                    <output expression="&quot;KETIK NAMA PAKET DENGAN HURUF BESAR SEMUA&quot;" newline="True"/>
+                    <input variable="pp"/>
+                    <assign variable="BR" expression="&quot;BRONZE&quot;"/>
+                    <assign variable="SV" expression="&quot;SILVER&quot;"/>
+                    <assign variable="GL" expression="&quot;GOLD&quot;"/>
+                    <assign variable="PL" expression="&quot;PLATINUM&quot;"/>
+                    <assign variable="BL" expression="1500"/>
+                    <if expression="pp=BR">
+                        <then>
+                            <assign variable="TBB" expression="BL+BL*1/100"/>
+                            <output expression="TBB" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="pp=SV">
+                                <then>
+                                    <assign variable="TBS" expression="BL+BL*3/100"/>
+                                    <output expression="TBS" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="pp=GL">
+                                        <then>
+                                            <assign variable="TBG" expression="BL+BL*5/100"/>
+                                            <output expression="TBG" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="pp=PL">
+                                                <then>
+                                                    <assign variable="TBP" expression="BL+BL*7/100"/>
+                                                    <output expression="TBP" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;Pilihan Tidak Valid&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;gagal login&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
