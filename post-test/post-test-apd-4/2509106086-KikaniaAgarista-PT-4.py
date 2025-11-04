@@ -6,7 +6,7 @@ percobaan = 1
 login_berhasil = False
 
 while percobaan <= 3:
-    nama = input("Masukkan Nama: ").lower()
+    nama = input("Masukkan Nama: ")
     nim = input("Masukkan NIM: ")
 
     if nama == "kikania" and nim == "086":

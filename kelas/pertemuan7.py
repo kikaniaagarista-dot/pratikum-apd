@@ -79,7 +79,7 @@
 #     return c
 # print(lpersegi(6))
 
-def lpersegi(s):
-    c = s*s
+# def lpersegi(s):
+#     c = s*s
 
-print(lpersegi(6))
+# print(lpersegi(6))
